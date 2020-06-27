@@ -19,14 +19,17 @@
 - thank you very much
 
 
-## intent:inform_disease
+## intent:imply_disease
 - my baby is sick
 - I want to know if my baby is ill
 - I want to test against [allergy](disease)
 - I have some [symptoms](symptom) of a disease 
 - I [itch](symptom) too much
+- I am having [itching](symptom)
+- Yes, I have [itching](symptom)
 - I have continuous [sneezing](symptom)
 - I think I have [common cold](disease), I want to make sure
+
 
 
 ## intent:affirm
@@ -43,28 +46,10 @@
 - don't like that
 - no way
 - not really
+ 
 
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
 
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
+
 
 ## intent:bot_challenge
 - are you a bot?

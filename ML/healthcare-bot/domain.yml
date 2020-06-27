@@ -1,38 +1,385 @@
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - thank
-  - inform_disease
-
-responses:
-
-  utter_prediction_page:
-    - text: "You can predict disease via this link: https://github.com/nadamakram/BabyCare/blob/master/ML/DiseasePrediction/disease-prediction-feature.ipynb"
-
-  utter_greet:
-  - text: "Hey! I am BabyCare bot. I can help you predict desease"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- mood_great
+- bot_challenge
+- thank
+- imply_disease
+- affirm
+- deny
+entities:
+- disease
+- symptom
+slots:
+  acute_liver_failure:
+    type: unfeaturized
+  anxiety:
+    type: unfeaturized
+  belly_pain:
+    type: unfeaturized
+  blister:
+    type: unfeaturized
+  blood_in_sputum:
+    type: unfeaturized
+  cold_hands_and_feets:
+    type: unfeaturized
+  dehydration:
+    type: unfeaturized
+  dischromic _patches:
+    type: unfeaturized
+  extra_marital_contacts:
+    type: unfeaturized
+  fluid_overload:
+    type: unfeaturized
+  foul_smell_of urine:
+    type: unfeaturized
+  history_of_alcohol_consumption:
+    type: unfeaturized
+  irregular_sugar_level:
+    type: unfeaturized
+  knee_pain:
+    type: unfeaturized
+  lack_of_concentration:
+    type: unfeaturized
+  movement_stiffness:
+    type: unfeaturized
+  mucoid_sputum:
+    type: unfeaturized
+  pain_behind_the_eyes:
+    type: unfeaturized
+  pain_in_anal_region:
+    type: unfeaturized
+  passage_of_gases:
+    type: unfeaturized
+  patches_in_throat:
+    type: unfeaturized
+  pus_filled_pimples:
+    type: unfeaturized
+  runny_nose:
+    type: unfeaturized
+  rusty_sputum:
+    type: unfeaturized
+  silver_like_dusting:
+    type: unfeaturized
+  spinning_movements:
+    type: unfeaturized
+  spotting_ urination:
+    type: unfeaturized
+  sunken_eyes:
+    type: unfeaturized
+  swollen_blood_vessels:
+    type: unfeaturized
+  ulcers_on_tongue:
+    type: unfeaturized
+  visual_disturbances:
+    type: unfeaturized
+  watering_from_eyes:
+    type: unfeaturized
+  weakness_in_limbs:
+    type: unfeaturized
+  weakness_of_one_body_side:
+    type: unfeaturized
+  yellow_urine:
+    type: unfeaturized
+responses:
+  utter_ask_ulcers_on_tongue:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have ulcers on tongue?y/n
+  utter_ask_spotting_ urination:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have spotting urination?y/n
+  utter_ask_anxiety:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have anxiety?y/n
+  utter_ask_cold_hands_and_feets:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have cold hands and feets?y/n
+  utter_ask_patches_in_throat:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have patches in throat?y/n
+  utter_ask_irregular_sugar_level:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from irregular sugar level?y/n
+  utter_ask_sunken_eyes:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have sunken eyes?y/n
+  utter_ask_dehydration:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from dehydration?y/n
+  utter_ask_pain_behind_the_eyes:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from pain behind the eyes?y/n
+  utter_ask_yellow_urine:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have yellow urine?y/n
+  utter_ask_acute_liver_failure:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from acute liver failure?y/n
+  utter_ask_fluid_overload:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have fluid overload?y/n
+  utter_ask_runny_nose:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from runny nose?y/n
+  utter_ask_weakness_in_limbs:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have weakness in limbs?y/n
+  utter_ask_pain_in_anal_region:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have pain in anal region?y/n
+  utter_ask_swollen_blood_vessels:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have swollen blood vessels?y/n
+  utter_ask_extra_marital_contacts:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have extra marital contacts?y/n
+  utter_ask_knee_pain:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have knee pain?y/n
+  utter_ask_movement_stiffness:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from movement stiffness?y/n
+  utter_ask_spinning_movements:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from spinning movements?y/n
+  utter_ask_weakness_of_one_body_side:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from weakness of one body side?y/n
+  utter_ask_foul_smell_of urine:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have a foul smell of urine?y/n
+  utter_ask_passage_of_gases:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have passage of gases?y/n
+  utter_ask_belly_pain:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from belly pain?y/n
+  utter_ask_dischromic _patches:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have dischromic patches?y/n
+  utter_ask_watering_from_eyes:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from watering from eyes?y/n
+  utter_ask_mucoid_sputum:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have mucoid sputum?y/n
+  utter_ask_rusty_sputum:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have rusty sputum?y/n
+  utter_ask_lack_of_concentration:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from lack of concentration?y/n
+  utter_ask_visual_disturbances:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you suffer from visual disturbances?y/n
+  utter_ask_history_of_alcohol_consumption:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have history of alcohol consumption?y/n
+  utter_ask_blood_in_sputum:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have blood in sputum?y/n
+  utter_ask_pus_filled_pimples:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have pus filled pimples?y/n
+  utter_ask_silver_like_dusting:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have silver like dusting?y/n
+  utter_ask_blister:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: do you have blister?y/n
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! I am BabyCare bot. I can help you predict disease
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_prediction_page:
+  - text: 'You can predict disease via this link: https://github.com/nadamakram/BabyCare/blob/master/ML/DiseasePrediction/disease-prediction-feature.ipynb'
+  utter_submit:
+  - text: submitted
+actions:
+- utter_ask_ulcers_on_tongue
+- utter_ask_spotting_ urination
+- utter_ask_anxiety
+- utter_ask_cold_hands_and_feets
+- utter_ask_patches_in_throat
+- utter_ask_irregular_sugar_level
+- utter_ask_sunken_eyes
+- utter_ask_dehydration
+- utter_ask_pain_behind_the_eyes
+- utter_ask_yellow_urine
+- utter_ask_acute_liver_failure
+- utter_ask_fluid_overload
+- utter_ask_runny_nose
+- utter_ask_weakness_in_limbs
+- utter_ask_pain_in_anal_region
+- utter_ask_swollen_blood_vessels
+- utter_ask_extra_marital_contacts
+- utter_ask_knee_pain
+- utter_ask_movement_stiffness
+- utter_ask_spinning_movements
+- utter_ask_weakness_of_one_body_side
+- utter_ask_foul_smell_of urine
+- utter_ask_passage_of_gases
+- utter_ask_belly_pain
+- utter_ask_dischromic _patches
+- utter_ask_watering_from_eyes
+- utter_ask_mucoid_sputum
+- utter_ask_rusty_sputum
+- utter_ask_lack_of_concentration
+- utter_ask_visual_disturbances
+- utter_ask_history_of_alcohol_consumption
+- utter_ask_blood_in_sputum
+- utter_ask_pus_filled_pimples
+- utter_ask_silver_like_dusting
+- utter_ask_blister
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_prediction_page
+- utter_submit
+forms:
+- form_info
